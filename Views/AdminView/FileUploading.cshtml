@@ -1,0 +1,26 @@
+﻿@{
+    ViewBag.Title = "FileUploading";
+}
+
+<br><br>
+<div class="product-big-title-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="product-bit-title text-center">
+                        <h2>File Uploading</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<br><br><br>
+<form action="/AdminView/saveFile" method="post" enctype="multipart/form-data" >
+
+    Upload File: <input type="file" name="image" />
+ 
+     
+ <br><br>
+    <input type="submit" value="upload" />
+</form>
+<br><br>

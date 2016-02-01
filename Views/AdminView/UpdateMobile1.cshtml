@@ -1,0 +1,28 @@
+﻿@model MvcMobileApplication.Models.Mobile
+@{
+    ViewBag.Title = "UpdateMobile1";
+}
+
+<h1 align="center"  style="background-color:silver"><i> Update Mobile </i></h1>
+<form  action="/AdminView/UpdateMobile2/@Model.MID" method="post"  >
+
+Name:<br>
+<input type="text" value="@Model.Name" name="name" ><br>
+
+Price:<br>
+<input type="text" value="@Model.Price" name="price" ><br>
+size:<br>
+<input type="text" value="@Model.Size" name="size" ><br>
+weight:<br>
+<input type="text" value="@Model.Weight" name="weight" ><br>
+PlatForm:<br>
+<input type="text" value="@Model.Platform" name="platForm" ><br>
+Memory:<br>
+<input type="text" value=@Model.Memory"" name="memory" ><br>
+BatteryLife:<br>
+<input type="text" value="@Model.BatteryLife" name="batteryLife" ><br>
+    Quantity:<br>
+<input type="text" value="@Model.Quantity" name="quantity" ><br>
+    <br><br>
+<input type="submit" name="submit" value="Update MOBILE">
+</form>
