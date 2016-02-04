@@ -1,0 +1,86 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<!DOCTYPE html>
+
+    <script>
+function validate(){
+		if(document.adminlogin.name == "" )
+		{
+			alert("please provide your name!!!");
+			document.adminlogin.name.focus();
+			return false;
+		}
+		else if(document.adminlogin.name != "admin" )
+		{
+			alert("invalid name!!!");
+			document.adminlogin.name.focus();
+			return false;
+		}
+
+		else if(document.adminlogin.mail == "" )
+		{
+			alert("please provide your mailing ID  !");
+			document.adminlogin.name.focus();
+			return false;
+		}
+
+		else if(document.adminlogin.mail != "admin@mymail.com" )
+		{
+			alert("invalid name!!!");
+			document.adminlogin.name.focus();
+			return false;
+		}
+
+		else if(document.adminlogin.password != "admin" )
+		{
+			alert("invalid name!!!");
+			document.adminlogin.name.focus();
+			return false;
+		}
+		else if(document.adminlogin.mail != "" )
+		{
+			alert("invalid name!!!");
+			document.adminlogin.name.focus();
+			return false;
+		}
+		else{
+			alert("successfully login");
+			return true;
+		}
+		
+		
+		
+}
+</script>
+
+
+
+
+<body  >
+<br><br>
+<div class="product-big-title-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="product-bit-title text-center">
+                        <h2>Customer Login</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+	<br><br>
+<form action="/CustomerLogin/CustomerVerify" method="post" >
+Name:<br>
+<input type="text" name="Name"><br><br>
+password:<br>
+<input type="text" name="pass"><br><br>
+
+<input type="submit" value="Log IN"><br><br>
+   
+</form>
+
+</body>

@@ -1,0 +1,68 @@
+@model List<MvcMobileApplication.Models.Mobile>
+<html>
+<h1 align="center"  style="background-color:silver"><i>  </i></h1>
+
+<body >
+    
+
+    <div class="product-big-title-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="product-bit-title text-center">
+                        <h2>Update Mobile</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+	<br><br>
+<Table border="8" style="width:100%">
+     <tr>
+         <td>
+            <b> MID </b> 
+         </td>
+         <td>
+             <b>Name</b> 
+         </td>
+         <td>
+           <b>Price</b>  
+         </td>
+         <td>
+             <b>Memory</b> 
+         </td>
+
+         <td>
+             <b>Size</b> 
+         </td>
+         <td>
+            <b>Quantity</b>  
+         </td>
+     </tr>
+    @foreach (var m in Model)
+    { 
+     <tr>
+         <td>
+             @m.MID 
+         </td>
+         <td>
+             @m.Name 
+         </td>
+         <td>
+           @m.Price 
+         </td>
+         <td>
+             @m.Memory 
+         </td>
+
+         <td>
+             @m.Size 
+         </td>
+         <td>
+             @m.Quantity 
+         </td>
+         <td><a href="/AdminView/UpdateMobile1/@m.MID"> Update </a></td>
+     </tr>   
+       
+    }</body>
+</html>

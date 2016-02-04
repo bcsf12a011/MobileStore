@@ -1,0 +1,54 @@
+@{
+    ViewBag.Title = "Index";
+}
+
+<h1 align="center"  style="background-color:silver"> Customer FORM </h1>
+<div id="checking">Checking...</div>
+
+
+<div>
+    <form action="/CustomerView/CustomerAdd" method="post">
+Name:<br>
+<input type="text" name="name" id ="name"><br>
+Password:<br>
+<input type="text" name="pass" id="pass" ><br>
+E-mail:<br>
+<input type="text" name="Email" id="email" ><br>
+<br>
+<input type="submit" value="Customer View">
+<input type="button" id="b1" value="Sign UP" />
+        
+ </form>
+<div id="result"></div>
+    @Scripts.Render("~/bundles/jquery")
+
+    <script>
+
+        $(document).ready(function () {
+
+            $('#checking').hide();
+
+            $('#b1').click(function () {
+
+                var email = $('#email').val();
+
+                alert('User Name ='+ email);
+                $('#checking').show();
+                $.getJSON("/CustomerLogin/CustomerSignUp?Email=" + email, function (data) {
+                    $('#checking').hide();
+                    if (data) {
+                        $('#result').text("SignUp is Successfull");
+
+                    }
+                    else {
+                        $('#result').text("Already Exist User");
+                    }
+                });
+
+            });
+
+        });
+    </script>
+</div>
+
+

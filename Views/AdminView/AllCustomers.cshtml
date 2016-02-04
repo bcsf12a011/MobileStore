@@ -1,0 +1,58 @@
+﻿@model List<MvcMobileApplication.Models.Customer>
+<html>
+<h1 align="center"  style="background-color:silver"><i>  </i></h1>
+
+<body>
+
+    <div class="product-big-title-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="product-bit-title text-center">
+                        <h2>Delete Mobile</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br>
+<Table border="8" style="width:100%">
+     <tr>
+         <td>
+            <b> ICID </b> 
+         </td>
+         <td>
+             <b>Name</b> 
+         </td>
+         <td>
+           <b>Password</b>  
+         </td>
+         <td>
+             <b>Email</b> 
+         </td>
+
+         
+     </tr>
+    @foreach (var m in Model)
+    { 
+     <tr>
+         <td>
+             @m.CID 
+         </td>
+         <td>
+             @m.Name 
+         </td>
+         <td>
+           @m.Password 
+         </td>
+         <td>
+             @m.Email 
+         </td>
+
+         
+         
+     </tr>   
+       
+    }
+</body>
+</html>

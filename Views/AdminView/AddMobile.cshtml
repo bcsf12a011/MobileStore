@@ -1,0 +1,45 @@
+@model MvcMobileApplication.Models.Mobile
+
+
+
+<body >
+<h1 align="center"  style="background-color:silver"><i> </i></h1>
+    <div class="product-big-title-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="product-bit-title text-center">
+                        <h2>Add Mobile</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+	
+
+  @using (Html.BeginForm("AddMobile1" , "AdminView" ,FormMethod.Post))
+
+    {
+   @Html.LabelFor(x=>x.Name)<br>
+     @Html.TextBoxFor(x=>x.Name)
+<br>
+
+
+@Html.LabelFor(x=>x.Price)<br>
+    @Html.TextBoxFor(x=>x.Price)<br>
+@Html.LabelFor(x=>x.Size)<br>
+@Html.TextBoxFor(x=>x.Size)<br>
+@Html.LabelFor(x=>x.Weight)<br>
+@Html.TextBoxFor(x=>x.Weight)<br>
+@Html.LabelFor(x=>x.Platform)<br>
+@Html.TextBoxFor(x=>x.Platform)<br>
+@Html.LabelFor(x=>x.Memory)<br>
+@Html.TextBoxFor(x=>x.Memory)<br>
+@Html.LabelFor(x=>x.BatteryLife)<br>
+@Html.TextBoxFor(x=>x.BatteryLife)<br>
+@Html.LabelFor(x=>x.Quantity)<br>
+@Html.TextBoxFor(x=>x.Quantity)<br>
+    <br><br>
+<input type="submit" name="submit" value="ADD MOBILE">
+}
+</body>
